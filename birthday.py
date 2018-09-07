@@ -50,17 +50,17 @@ elif day == todaydate and month == todaymonth:
 else:
     if month in ["september", "october", "november"]:
         season = "fall"
-    elif month == ["december", "january", "february"]:
+    elif month in ["december", "january", "february"]:
         season = "winter"
-    elif month == ["march", "april", "may"]:
+    elif month in ["march", "april", "may"]:
         season = "spring"
     else:
         season = "summer"
     if year >= 2000:
         age = "two thousands"
-    if year >= 1990 and year < 2000:
+    elif year >= 1990 and year < 2000:
         age = "nineties"
-    if year >= 1980 and year < 1990:
+    elif year >= 1980 and year < 1990:
         age = "eighties"
     else:
         age = "Stone Age"
