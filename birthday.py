@@ -1,7 +1,7 @@
 """
 birthday.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Andrew Chen
+Credit: none
 Assignment:
 
 Your program will ask the user the following questions, in this order:
@@ -31,3 +31,21 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+from datetime import datetime
+from calendar import month_name
+
+name = input("What's your name? ")
+month = input("What month were you born in? ").lower()
+year = input("What year were you born in? ")
+day = input("What day were you born on? ")
+
+todaymonth = datetime.today().month
+todaymonth = month_name[todaymonth]
+todaydate = datetime.today().day
+other = 0
+if day == 31 and month == 10:
+    print ("You were born on Halloween!")
+elif day == todaydate and month == todaymonth:
+    print ("Happy birthday!")
+elif month == "september" or "october" or "november":
+    print(month)
