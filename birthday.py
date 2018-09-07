@@ -40,10 +40,10 @@ year = int(input("And what year were you born in, " + name + "? "))
 day = int(input("And the day? "))
 
 todaymonth = datetime.today().month
-todaymonth = month_name[todaymonth]
+todaymonth = month_name[todaymonth].lower()
 todaydate = datetime.today().day
 
-if day == 31 and month == 10:
+if day == 31 and month == "october":
     print ("You were born on Halloween!")
 elif day == todaydate and month == todaymonth:
     print ("Happy birthday!")
@@ -65,4 +65,3 @@ else:
     else:
         age = "Stone Age"
     print (name + ", you are a " + season + " baby of the " + age + ".")
-print (month)
