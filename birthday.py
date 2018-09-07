@@ -42,10 +42,26 @@ day = input("What day were you born on? ")
 todaymonth = datetime.today().month
 todaymonth = month_name[todaymonth]
 todaydate = datetime.today().day
-other = 0
+
 if day == 31 and month == 10:
     print ("You were born on Halloween!")
 elif day == todaydate and month == todaymonth:
     print ("Happy birthday!")
-elif month == "september" or "october" or "november":
-    print(month)
+else:
+    if month == "september" or "october" or "november":
+        season = "fall"
+    elif month == "december" or "january" or "february":
+        season = "winter"
+    elif month == "march" or "april" or "may":
+        season = "spring"
+    else
+        season = "summer"
+    if year >= 2000:
+        age = "two thousands"
+    if year >= 1990 and < 2000:
+        age = "nineties"
+    if year >= 1980 and < 1990:
+        age = "eighties"
+    else:
+        age = "Stone Age"
+    print (name + ", you are a " + season + " baby of the " + age + ".")
