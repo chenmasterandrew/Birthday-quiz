@@ -36,7 +36,7 @@ from calendar import month_name
 
 name = input("Hello, what is your name? ")
 month = input("Hi " + name + ", what was the name of the month you were born in? ").lower()
-year = int(input("And what year were you born in, " + name + "?"))
+year = int(input("And what year were you born in, " + name + "? "))
 day = int(input("And the day? "))
 
 todaymonth = datetime.today().month
@@ -48,11 +48,11 @@ if day == 31 and month == 10:
 elif day == todaydate and month == todaymonth:
     print ("Happy birthday!")
 else:
-    if month == "september" or "october" or "november":
+    if month in ["september", "october", "november"]:
         season = "fall"
-    elif month == "december" or "january" or "february":
+    elif month == ["december", "january", "february"]:
         season = "winter"
-    elif month == "march" or "april" or "may":
+    elif month == ["march", "april", "may"]:
         season = "spring"
     else:
         season = "summer"
@@ -65,3 +65,4 @@ else:
     else:
         age = "Stone Age"
     print (name + ", you are a " + season + " baby of the " + age + ".")
+print (month)
