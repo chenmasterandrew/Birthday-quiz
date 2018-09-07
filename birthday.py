@@ -34,10 +34,10 @@ Example Session
 from datetime import datetime
 from calendar import month_name
 
-name = input("What's your name? ")
-month = input("What month were you born in? ").lower()
-year = input("What year were you born in? ")
-day = input("What day were you born on? ")
+name = input("Hello, what is your name? ")
+month = input("Hi " + name + ", what was the name of the month you were born in? ").lower()
+year = int(input("And what year were you born in, " + name + "?"))
+day = int(input("And the day? "))
 
 todaymonth = datetime.today().month
 todaymonth = month_name[todaymonth]
@@ -54,13 +54,13 @@ else:
         season = "winter"
     elif month == "march" or "april" or "may":
         season = "spring"
-    else
+    else:
         season = "summer"
     if year >= 2000:
         age = "two thousands"
-    if year >= 1990 and < 2000:
+    if year >= 1990 and year < 2000:
         age = "nineties"
-    if year >= 1980 and < 1990:
+    if year >= 1980 and year < 1990:
         age = "eighties"
     else:
         age = "Stone Age"
